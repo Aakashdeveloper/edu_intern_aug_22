@@ -27,9 +27,10 @@ https://www.linkedin.com/ (Create Account)
 
 100%
 
-HTML
-CSS
-Bootstrap
+HTML  >>>> Raw Structure
+CSS   >>>> design Purpose (look and feel)
+Bootstrap >>>> Responsive (website fit on all screen)
+
 JavaScript
 NodejS+express
 MongoDb
@@ -51,3 +52,22 @@ Deployment
 >>> Coding >>>> Developer Funnel
 >>> Admin (Recording,link of class, assignment link) >>>>> Hari
 
+HTML > wrapper Main Tag
+Head > Use for Linking Purpose (Css,JS)
+     > Except title (nothing which is visble to user)
+Body > Whatever visible to user is part of body
+
+Block Level
+> They always start from new line
+> Take whole width of screen
+> H1, P , div
+
+Inline element
+> They start in same line
+> only take space which is required
+> A, img, span
+
+href > hyperRefernce
+src > source
+
+https://www.w3schools.com/tags/tag_hn.asp
