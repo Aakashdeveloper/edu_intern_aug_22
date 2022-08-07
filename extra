@@ -81,3 +81,36 @@ Map
 Footer
 Social Link
 
+
+
+//////////
+inline
+styleTag
+stylesheet
+
+inline>styleTag>stylesheet
+
+#inline
+{
+     color:red,
+     font-size:30px
+}
+
+#styletag
+{
+    font-size:40px;
+    border:2px solid black
+}
+#stylesheet
+{
+     color:green
+     border:5px solid black
+     width:40%
+}
+
+{
+    color:red,
+    font-size:30px ,
+    border:2px solid black,
+    width:40%
+}
