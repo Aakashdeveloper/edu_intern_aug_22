@@ -114,3 +114,15 @@ inline>styleTag>stylesheet
     border:2px solid black,
     width:40%
 }
+////////
+id > unique element target
+   > we use # for ids
+class > to provide same proprty to group of element
+     > we use . for classname
+tagname > to target particular tag on page
+
+solid
+dotted
+double
+groove
+dashed

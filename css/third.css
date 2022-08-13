@@ -1,0 +1,59 @@
+h1{
+    text-align:center;
+    color:purple
+}
+#mainDiv{
+    margin-left:4%;
+    display: inline-block
+}
+
+.card{
+    height:400px;
+    width:20%;
+    background-color:#3E93C0 ;
+    float:left;
+    /* display: inline-block; */
+    margin:2%;
+    overflow: scroll;
+}
+.brown{
+    background-color:#634436
+}
+#waterBlue{
+    background-color:#247298
+}
+.slateBrown{
+    background-color:#baac99
+}
+
+
+
+.cardImg{
+    width:100%;
+    height:200px
+}
+.card > img {
+    width:100%;
+    height:200px
+}
+.card h2{
+    text-align:center;
+}
+
+#slideCard{
+    margin-left:10%;
+    width:80%;
+    display: inline-block;
+    border: 10px groove red
+}
+
+.imgDiv{
+    float:left;
+    width:20%;
+}
+.textDiv{
+    float:left;
+    width:70%;
+    margin-left:2%;
+    /* margin-top:-2% */
+}
