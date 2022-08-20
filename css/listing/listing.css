@@ -1,0 +1,72 @@
+body{
+    margin:auto
+}
+a{
+    text-decoration: none;
+}
+/*Header Css*/
+header{
+    height:60px;
+    color:#fff;
+    /* border:2px solid red; */
+    background-color:#3b2632
+}
+#brand{
+    float:left;
+    margin-left: 2%;
+    font-size:35px;
+    
+}
+#brand >a{
+    color: white !important
+}
+#social{
+    float:right;
+    margin-right: 2%;
+}
+.socialLogo{
+    height:50px
+}
+
+/**/
+#content{
+    width:80%;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top:2%
+}
+
+#filterDiv{
+    height:550px;
+    width:20%;
+    border:2px solid gray;
+    float:left;
+}
+#contentDiv{
+    height:800px;
+    width:75%;
+    margin-left:4%;
+    border:2px solid red;
+    float:left;
+}
+
+
+/*Footer Css*/
+footer{
+    margin-top:5%;
+    height:120px;
+    text-align: center;
+    background-color:#3b2632;
+    color:white
+    /* border:2px solid purple */
+}
+
+.footDiv{
+    height:70px;
+    width:33%;
+    float:left;
+    border-right:2px solid white
+}
+.noborder{
+    border:none
+}
