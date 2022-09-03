@@ -5,3 +5,31 @@
     color:red;
     font-size:30px;
 }
+#first{
+    height:200px;
+    background-color:palegreen
+}
+#second{
+    height:200px;
+    background-color:rgb(245, 211, 149)
+}
+#third{
+    height:200px;
+    background-color:rgb(187, 153, 243)
+}
+#fourth{
+    height:200px;
+    background-color:rgb(253, 152, 181)
+}
+#fifth{
+    height:200px;
+    background-color:rgb(156, 243, 251)
+}
+#sixth{
+    height:200px;
+    background-color:rgb(138, 132, 89)
+}
+#seventh{
+    height:200px;
+    background-color:rgb(135, 168, 225)
+}
