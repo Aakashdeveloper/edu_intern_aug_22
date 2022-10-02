@@ -88,3 +88,52 @@ city.splice(2,1)
 //remove 2 value form index 4 and add 1 value
 city.splice(4,2,'Genoa')
 ['Delhi', 'Mumbai', 'Nice', 'Pisa', 'Genoa', 'Boston']
+
+var a = ['Delhi', 'Mumbai', 'Nice', 'Pisa', 'Genoa', 'Boston']
+undefined
+a.indexOf('Paris')
+-1
+a.indexOf('Indore')
+-1
+a.indexOf('Delhi')
+0
+a.indexOf('Genoa')
+4
+
+var a = ['a','b','c',1]
+var b = [2,3,'d','e']
+a+b
+'a,b,c,12,3,d,e'
+
+a.concat(b)
+(8) ['a', 'b', 'c', 1, 2, 3, 'd', 'e']
+
+var a = ["a","b",'c']
+var b = "Hiii"
+undefined
+Array.isArray(a)
+true
+Array.isArray(b)
+false
+
+var a = ['Delhi', 'Mumbai',['Red',['Audi','Bmw','Merc'],'Yellow',"Green"], 'Genoa', 'Boston']
+a[0]
+'Delhi'
+a[2]
+(4) ['Red', Array(3), 'Yellow', 'Green']
+a[2][0]
+'Red'
+a[2][2]
+'Yellow'
+a[2][1]
+(3) ['Audi', 'Bmw', 'Merc']
+a[2][1][0]
+'Audi'
+a[2][1][1]
+'Bmw'
+[
+    [0,1,0],
+    [0,1,0],
+    [0,1,0]
+]
+
