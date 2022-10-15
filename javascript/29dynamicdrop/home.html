@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <link href="home.css" rel="stylesheet" type="text/css"/>
+        <script src="home.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="brand">
+                <h1>Developer Funnel</h1>
+            </div>
+            <div id="social">
+                <a href="www.facebook.com">
+                    <img src="https://i.ibb.co/wrG1PKh/facebook.png" alt="fb" class="socialLogo"/>
+                </a>
+                <a href="www.facebook.com">
+                    <img src="https://i.ibb.co/19H5LvT/insta.png" alt="fb" class="socialLogo"/>
+                </a>
+                <a href="www.facebook.com">
+                    <img src="https://i.ibb.co/w07K2Vn/youtube1.png" alt="fb" class="socialLogo"/>
+                </a>
+            </div>
+        </header>
+        <div id="search">
+            <div id="logo">
+                <span>D!</span>
+            </div>
+            <div id="heading">
+                Find Best Place Near You
+            </div>
+            <div id="dropdown">
+                <select id="city" onChange="getRest()">
+                    <option>----SELECT YOUR CITY----</option>
+                  
+                </select>
+                <select id="restaurants">
+                    <option>----SELECT YOUR RESTAURANTS----</option>
+                   
+                </select>
+            </div>
+        </div>
+        <div id="quickSearch">
+            <span id="quickHeading">Quick Search</span>
+            <span id="quickSubHeading">Find Restaurants By MealType</span>
+            <div id="main">
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="images/dinner.png" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Dinner</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Dinner Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Lunch</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Dinner Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="https://i.ibb.co/q1fC2jW/nightlife.jpg" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">NightLife</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Dinner Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="https://i.ibb.co/wchCHfb/snacks.jpg" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Snacks</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Dinner Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="https://i.ibb.co/YR0S6fV/drinks.jpg" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Drinks</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Dinner Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="https://i.ibb.co/FVhSTWK/breakfast.jpg" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">BreakFast</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Dinner Near You
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; Developer Funnel</p>
+            <hr/>
+            <div class="footDiv">
+                <p>Contact Us</p>
+                <p>About Us</p>
+            </div>
+            <div class="footDiv">
+                <p>Contact Us</p>
+                <p>About Us</p>
+            </div>
+            <div class="footDiv noborder">
+                <p>Contact Us</p>
+                <p>About Us</p>
+            </div>
+        </footer>
+        <script>
+            window.onload = getCity()
+        </script>
+
+    </body>
+
+</html>

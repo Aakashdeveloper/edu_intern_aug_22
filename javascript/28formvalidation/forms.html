@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="forms.css" rel="stylesheet" type="text/css"/>
+        <script src="forms.js"></script>
+    </head>
+    <body>
+        <hr/>
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4>Employee</h4>
+                </div>
+                <div class="panel-body">
+                    <form action="" method="POST">
+                        <div class="form-group" id="fdiv">
+                            <label for="firstname" class="control-label">FirstName</label>
+                            <input type="text" name="fname" placeholder="Enter First Name"
+                            class="form-control" id="fname" onblur="validateFname()"/>
+                            <p id="fout"></p>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Email</label>
+                                <input type="text" name="email" class="form-control" 
+                                id="email" oninput="validateEmail()"/>
+                                <p id="eout"></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Password</label>
+                                <input type="password" name="pwd" class="form-control"
+                                id="pwd" oninput="validatePass()"/>
+                                <span class="glyphicon glyphicon-eye-open" onClick="showPassword()"></span>
+                                <p id="pout"></p>
+                                <div id="ppout"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Confirm Password</label>
+                                <input type="password" name="cpwd" class="form-control"
+                                id="cpwd" oninput="validateCPass()"/>
+                                <p id="cpout"></p>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select class="form-control" name="country" onChange="getCity()" id="country">
+                                <option>India</option>
+                                <option>France</option>
+                                <option>Germany</option>
+                            </select>
+                            <span></span>
+
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
