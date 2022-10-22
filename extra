@@ -156,3 +156,33 @@ Eval for calculator
 
 
 https://github.com/anishLearnsToCode/hackerrank-10-days-of-javascript
+
+
+NodeJs
+> Nodejs is a backend
+
+> Single threaded, async, non blocking I/O
+
+
+2,148,639
+npm> Node Package Manger
+
+
+////////package.json///////
+> this is the entry point to the app
+> it contains MetaData (Name,version,description)
+> All the packages we use in the app
+> Script (start, build,test)
+
+// Step to generate package.json
+** NodeJs must be installed in laptop
+> Go inside the folder using cmd
+> npm init
+> Answer All the questions
+> Type "yes"
+
+
+// Step to install package
+** NodeJs must be installed in laptop
+> Go inside the folder using cmd
+> npm i packageName/ npm install packageName
