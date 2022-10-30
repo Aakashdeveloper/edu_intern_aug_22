@@ -186,3 +186,21 @@ npm> Node Package Manger
 ** NodeJs must be installed in laptop
 > Go inside the folder using cmd
 > npm i packageName/ npm install packageName
+
+global dependency
+> which will install in laptop irrespative of any folder
+> Mainly package use for the purpose of starting the app
+
+> open the cmd as Admin
+> npm i -g packageName
+
+npm i -g nodemon
+
+
+C > Create  (POST)
+R > Read    (GET)
+U > Update  (PUT)
+D > Delete  (DELETE)
+
+
+https://www.mongodb.com/try/download/community

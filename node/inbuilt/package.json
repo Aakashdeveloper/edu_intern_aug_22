@@ -1,0 +1,13 @@
+{
+  "name": "inbuilt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node staticapi.js",
+    "dev":"nodemon staticapi.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
