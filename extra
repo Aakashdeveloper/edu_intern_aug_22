@@ -204,3 +204,16 @@ D > Delete  (DELETE)
 
 
 https://www.mongodb.com/try/download/community
+
+
+params
+> What we pass after /
+> We need to define
+> Should be use for 1 or 2 value
+> If define than complusory to pass
+
+queryParams
+> What we pass after ?
+> No need to define
+> For multiple value 
+> Not complusory to pass

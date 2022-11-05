@@ -47,3 +47,69 @@ Select      Find
 Insert      Insert
 Update      Update
 Delete      Remove
+
+
+//Start mongodb server
+# window
+> open cmd
+> go inside c:\program Files\mongodb\5.6\server\bin
+> mongod
+(27017)
+* Do not cloase this cmd
+
+//Start mongodb client
+> Open new cmd
+> go inside c:\program Files\mongodb\5.6\server\bin
+> mongo
+
+//Start mongodb server
+# mac
+> open terminal
+> mongod --dbpath data/db
+(27017)
+* Do not close this terminal
+
+//Start mongodb client
+> Open new terminal
+> mongo
+
+// to See all the database
+> show dbs
+
+// to inside any db
+> use database name
+
+// to see all the collections
+> show collections
+
+//to see all the records
+> db.collectionName.find()
+
+
+////////////////////////////////////////////////////////////////
+//to create database
+> use dbname
+
+//step to insert data in mongo
+db.collectionName.insert();
+
+db.city.insert({name:'London'})
+db.city.insert({name:'Amsterdam'})
+db.city.insert({_id:1,name:'Mumbai'})
+db.city.insert({_id:2,name:'Paris'})
+
+_id primary key
+> every record will hve _id
+
+_id 12 bytes
+5 bytes > Random Number
+3 bytes > Series
+4 bytes > timestamp
+
+
+// data on the basis of condition
+db.collectionName.find({condition})
+
+db.restaurants.find({state_id:2,"average_rating" : 4.5}).pretty()
+
+db.restaurants.find({"mealTypes.mealtype_id":2}).pretty()
