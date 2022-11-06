@@ -6,7 +6,13 @@ let port = process.env.PORT || 7800;
 let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
 let mongoUrl = process.env.MongoURL;
+let bodyParser = require('body-parser')
 let db;
+
+//middleware
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json())
+
 
 app.get('/',(req,res) => {
     res.send('Hii from Express')
@@ -37,20 +43,108 @@ app.get('/restaurants',(req,res)=>{
     })
 })
 
-// // list of restaurants
-// app.get('/restaurants/:stateId',(req,res)=>{
-//     let stateId = Number(req.params.stateId)
-//     db.collection('restaurants').find({state_id:stateId}).toArray((err,result) => {
-//         if(err) throw err;
-//         res.send(result)
-//     })
-// })
+app.get('/filter/:mealId',(req,res) => {
+    let query = {};
+    let sort = {cost:1}
+    let mealId = Number(req.params.mealId);
+    let cuisineId = Number(req.query.cuisineId);
+    let lcost = Number(req.query.lcost);
+    let hcost = Number(req.query.hcost);
+
+    if(req.query.sort){
+        sort={cost:req.query.sort}
+    }
+
+    if(hcost && lcost && cuisineId){
+        query={
+            "mealTypes.mealtype_id":mealId,
+            $and:[{cost:{$gt:lcost,$lt:hcost}}]
+        }
+    }
+    else if(hcost && lcost){
+        query={
+            "mealTypes.mealtype_id":mealId,
+            $and:[{cost:{$gt:lcost,$lt:hcost}}]
+        }
+    }
+    else if(cuisineId){
+        query={
+            "mealTypes.mealtype_id":mealId,
+            "cuisines.cuisine_id":cuisineId
+        }
+    }else{
+        query={
+            "mealTypes.mealtype_id":mealId
+        }
+    }
+    db.collection('restaurants').find(query).sort(sort).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
+app.get('/details/:restId',(req,res)=>{
+    let restId = Number(req.params.restId)
+    db.collection('restaurants').find({restaurant_id:restId}).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+app.get('/menu/:id',(req,res)=>{
+    let id = Number(req.params.id)
+    db.collection('menu').find({restaurant_id:id}).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
 
 // list of mealType
 app.get('/mealType',(req,res)=>{
     db.collection('mealType').find().toArray((err,result) => {
         if(err) throw err;
         res.send(result)
+    })
+})
+
+// order
+app.get('/orders',(req,res)=>{
+    //let email = req.query.email
+    let email = req.query.email;
+    let query = {}
+    if(email){
+        //query={email:email}
+        query={email}
+    }else{
+        query={}
+    }
+    db.collection('orders').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//placeorder
+app.post('/menuItem',(req,res) => {
+    if(Array.isArray(req.body.id)){
+        db.collection('menu').find({menu_id:{$in:req.body.id}}).toArray((err,result) => {
+            if(err) throw err;
+            res.send(result)
+        })
+    }else{
+        res.send('Invalid Input')
+    }
+    
+})
+
+//placeorder
+app.post('/placeOrder',(req,res) => {
+    db.collection('orders').insert(req.body,(err,result) => {
+        if(err) throw err;
+        res.send('Order Placed')
     })
 })
 
@@ -65,4 +159,13 @@ MongoClient.connect(mongoUrl,(err,client) => {
     })
 
 })
+
+// // list of restaurants
+// app.get('/restaurants/:stateId',(req,res)=>{
+//     let stateId = Number(req.params.stateId)
+//     db.collection('restaurants').find({state_id:stateId}).toArray((err,result) => {
+//         if(err) throw err;
+//         res.send(result)
+//     })
+// })
 

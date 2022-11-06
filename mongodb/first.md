@@ -113,3 +113,15 @@ db.collectionName.find({condition})
 db.restaurants.find({state_id:2,"average_rating" : 4.5}).pretty()
 
 db.restaurants.find({"mealTypes.mealtype_id":2}).pretty()
+
+db.restaurants.find({$and:[{cost:{$gt:100,$lt:500}}]}).pretty()
+
+db.collectionName.find({condition}).sort({cost:-1})
+
+
+db.collectionName.find({condition}).limit(5)
+
+
+db.collectionName.find({condition}).skip(10).limit(5)
+
+db.collectionName.find({meal_id:{$in:[5,8,9]}})
