@@ -5,13 +5,15 @@ dotenv.config()
 let port = process.env.PORT || 7800;
 let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
-let mongoUrl = process.env.MongoURL;
+let mongoUrl = process.env.LiveMongo;
+let cors = require('cors')
 let bodyParser = require('body-parser')
 let db;
 
 //middleware
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
+app.use(cors())
 
 
 app.get('/',(req,res) => {
@@ -148,12 +150,39 @@ app.post('/placeOrder',(req,res) => {
     })
 })
 
+//updateOrder
+app.put('/updateOrder/:id',(req,res) => {
+    let oid = Number(req.params.id);
+    db.collection('orders').updateOne(
+        {id:oid},
+        {
+            $set:{
+                "status":req.body.status,
+                "bank_name":req.body.bank_name,
+                "date":req.body.date
+            }
+        },(err,result) => {
+            if(err) throw err;
+            res.send('Order Updated')
+        }
+    )
+})
+
+
+//deleteOrder
+app.delete('/deleteOrder/:id',(req,res) => {
+    let _id = mongo.ObjectId(req.params.id);
+    db.collection('orders').remove({_id},(err,result) => {
+        if(err) throw err;
+        res.send('Order Deleted')
+    })
+})
 
 
 //connection with db
 MongoClient.connect(mongoUrl,(err,client) => {
     if(err) console.log('Error while connecting');
-    db = client.db('internfeb');
+    db = client.db('sepintern');
     app.listen(port,()=>{
         console.log(`Server is running on port ${port}`)
     })

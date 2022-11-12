@@ -125,3 +125,32 @@ db.collectionName.find({condition}).limit(5)
 db.collectionName.find({condition}).skip(10).limit(5)
 
 db.collectionName.find({meal_id:{$in:[5,8,9]}})
+
+db.collectionName.update(
+    {orderId:3},
+    {
+        $set:{
+            "status":"Delivered"
+        }
+    }
+)
+
+db.collectionName.update(
+    {orderId:3},
+    {
+        $unset:{
+            "status":1
+        }
+    }
+)
+
+///delete all the values
+db.orders.remove({})
+
+db.orders.remove({orderId:1})
+
+Network Access
+> 0.0.0.0/0
+
+Database Access
+> Create new user

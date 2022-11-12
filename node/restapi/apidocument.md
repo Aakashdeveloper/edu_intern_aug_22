@@ -61,4 +61,12 @@ body
 * http://localhost:9800/orders?email=a@a.com
 
 > Update Payement Details (PUT)
+* http://localhost:9800/updateOrder/64
+body
+{
+        "status":"TXN_SUCCESS",
+        "bank_name":"HDFC",
+        "date":"10/11/2022"
+}
 > Delete Order (Delete)
+* http://localhost:9800/deleteOrder/636f6d0f1fc0c04a6e729cd7
