@@ -220,3 +220,15 @@ queryParams
 
 https://account.mongodb.com/account/login
 https://dashboard.paytm.com/
+
+
+render.com
+
+React > Frontend framework that help to single page application using
+component based structure
+
+/////////////////////////////////
+Step to generate React App
+///////////////////////////////////////
+> open the cmd go inside the folder
+> npx create-react-app firstapp
