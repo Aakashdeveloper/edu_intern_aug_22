@@ -232,3 +232,30 @@ Step to generate React App
 ///////////////////////////////////////
 > open the cmd go inside the folder
 > npx create-react-app firstapp
+
+////////////
+class
+> Logical Component
+> We can maintain the state
+> maintain logical, call api and even display
+funtional
+> Dumb Component
+> We Cannot maintain State
+> Mainly use for display
+
+hooks
+
+
+////////
+State
+> Act like a local variable
+> Every component can have its own state
+> We can update the value of state
+> Any Data interaction will happen through state 
+
+Props
+> Help to transfer data between 2 nested component
+> We cannot update value of props
+
+parent > child (props)
+child > parent (props with function)
