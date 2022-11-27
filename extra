@@ -259,3 +259,12 @@ Props
 
 parent > child (props)
 child > parent (props with function)
+
+
+npm i react-router-dom
+npm i react-router-dom@5.3.0
+
+//////
+history > redirection
+location > queryParams
+match > Params

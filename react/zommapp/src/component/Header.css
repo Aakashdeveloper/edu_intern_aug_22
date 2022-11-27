@@ -1,0 +1,25 @@
+body{
+    margin:auto
+}
+a{
+    text-decoration: none;
+}
+/*Header Css*/
+header{
+    height:60px;
+    color:#fff;
+    /* border:2px solid red; */
+    background-color:#3b2632
+}
+#brand{
+    float:left;
+    margin-left: 2%;
+    margin-top: -1%;
+}
+#social{
+    float:right;
+    margin-right: 2%;
+}
+.socialLogo{
+    height:50px
+}
