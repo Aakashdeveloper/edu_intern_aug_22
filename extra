@@ -268,3 +268,26 @@ npm i react-router-dom@5.3.0
 history > redirection
 location > queryParams
 match > Params
+
+
+
+(get) cityname >           https://zomatoapi.onrender.com/location
+(get) restwrtcity >        https://zomatoapi.onrender.com/restaurant?stateId=1
+(get) quickSearch>         https://zomatoapi.onrender.com/quicksearch
+
+
+(get) onbasisofMeal >      https://zomatoapi.onrender.com/restaurant?mealtype_id=
+(get) cuisinefilter >      https://zomatoapi.onrender.com/filter/4?cuisine=1
+(get) costfilter >         https://zomatoapi.onrender.com/filter/1?hcost=1000&lcost=500
+
+(get) restdetails >        https://zomatoapi.onrender.com/details/1
+(get) menu >               https://zomatoapi.onrender.com/menu/1
+
+(post) orderspage >        https://zomatoapi.onrender.com/menuItem
+                           body [1,4,5]
+(post)placeOrder >        
+
+(get) allorder>            
+       
+(get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
+https://developerpayment.herokuapp.com/paynow

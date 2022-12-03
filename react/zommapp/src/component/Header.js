@@ -7,7 +7,8 @@ const Header = () => {
         <React.Fragment>
             <header>
                 <div id="brand">
-                    <h1>Developer Funnel</h1>
+                    Developer Funnel &nbsp;
+                    <Link className="btn btn-success" to="/">Home</Link>
                 </div>
                 <div id="social">
                     <a href="www.facebook.com">

@@ -1,7 +1,50 @@
 import React,{Component} from 'react';
 import './Search.css';
 
+const lurl = "https://zomatoapi.onrender.com/location"
+const rurl = "https://zomatoapi.onrender.com/restaurant?stateId="
 class Search extends Component {
+
+    constructor(props){
+        super(props)
+
+        this.state={
+            location:'',
+            restaurant:''
+        }
+    }
+
+    renderCity = (data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <option value={item.state_id} key={item.state_id}>{item.state}</option>
+                )
+            })
+        }
+    }
+
+    renderRest = (data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <option value={item.restaurant_id} key={item.restaurant_id}>
+                        {item.restaurant_name} | {item.address}
+                    </option>
+                )
+            })
+        }
+    }
+
+    handleCity=(event)=>{
+        let stateId = event.target.value;
+        fetch(`${rurl}${stateId}`,{method:"GET"})
+        .then((res) => res.json())
+        .then((data) => {
+            this.setState({restaurant:data})
+        })
+    }
+
     render(){
         return(
             <>
@@ -13,20 +56,28 @@ class Search extends Component {
                         Find Best Place Near You
                     </div>
                     <div id="dropdown">
-                        <select>
+                        <select onChange={this.handleCity}>
                             <option>----SELECT YOUR CITY----</option>
-                            <option>Delhi</option>
-                            <option>Mumbai</option>
+                           {this.renderCity(this.state.location)}
                         </select>
                         <select id="restaurants">
                             <option>----SELECT YOUR RESTAURANTS----</option>
-                            <option>Wow Momos</option>
-                            <option>Park Blue</option>
+                            {this.renderRest(this.state.restaurant)}
+                            
                         </select>
                     </div>
                 </div>
             </>
         )
+    }
+
+    //api calling on page load
+    componentDidMount(){
+        fetch(lurl,{method:"GET"})
+        .then((res) => res.json())
+        .then((data) => {
+            this.setState({location:data})
+        })
     }
 }
 
