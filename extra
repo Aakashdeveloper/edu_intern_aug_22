@@ -291,3 +291,12 @@ match > Params
        
 (get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
 https://developerpayment.herokuapp.com/paynow
+
+
+
+//dummy api
+* install global packege
+> run cmd as admin
+> npm i -g json-server
+
+> json-server --watch order.json --port 8700

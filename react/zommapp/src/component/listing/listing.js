@@ -3,7 +3,8 @@ import axios from 'axios';
 import './listing.css';
 import ListingDisplay from './listingDisplay';
 
-const lurl = "https://zomatoapi.onrender.com/restaurant?mealtype_id="
+//const lurl = "https://zomatoapi.onrender.com/restaurant?mealtype_id="
+const lurl = "http://localhost:9700/restaurant?mealtype_id="
 
 class Listing extends Component {
     constructor(props){

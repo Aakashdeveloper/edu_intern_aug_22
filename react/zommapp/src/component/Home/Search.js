@@ -1,8 +1,11 @@
 import React,{Component} from 'react';
 import './Search.css';
 
-const lurl = "https://zomatoapi.onrender.com/location"
-const rurl = "https://zomatoapi.onrender.com/restaurant?stateId="
+// const lurl = "https://zomatoapi.onrender.com/location"
+// const rurl = "https://zomatoapi.onrender.com/restaurant?stateId="
+
+const lurl = "http://localhost:9700/location"
+const rurl = "http://localhost:9700/restaurant?stateId="
 class Search extends Component {
 
     constructor(props){

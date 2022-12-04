@@ -2,7 +2,8 @@ import React,{Component} from 'react';
 import './QuickSearch.css';
 import QuickDisplay from './QuickDisplay'
 
-const qurl = "https://zomatoapi.onrender.com/quicksearch"
+//const qurl = "https://zomatoapi.onrender.com/quicksearch"
+const qurl = "http://localhost:9700/quicksearch"
 class QuickSearch extends Component {
 
     constructor(){
