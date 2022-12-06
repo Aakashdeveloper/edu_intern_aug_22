@@ -271,7 +271,7 @@ match > Params
 
 
 
-(get) cityname >           https://zomatoapi.onrender.com/location
+(get) cityname >           http://3.17.216.66:3000/location
 (get) restwrtcity >        https://zomatoapi.onrender.com/restaurant?stateId=1
 (get) quickSearch>         https://zomatoapi.onrender.com/quicksearch
 
