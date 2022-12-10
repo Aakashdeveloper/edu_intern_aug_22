@@ -9,8 +9,8 @@ import MenuDisplay from './menuList';
 // const rurl = "https://zomatoapi.onrender.com/details/1"
 // const murl = "https://zomatoapi.onrender.com/menu/1"
 
-const rurl = "http://localhost:9700/details"
-const murl = "http://localhost:9700/menu"
+const rurl = "http://3.17.216.66:4000/details"
+const murl = "http://3.17.216.66:4000/menu"
 
 class Details extends Component {
     constructor(props){

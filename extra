@@ -271,25 +271,25 @@ match > Params
 
 
 
-(get) cityname >           http://3.17.216.66:3000/location
-(get) restwrtcity >        https://zomatoapi.onrender.com/restaurant?stateId=1
-(get) quickSearch>         https://zomatoapi.onrender.com/quicksearch
+(get) cityname >           http://3.17.216.66:4000/location
+(get) restwrtcity >        http://3.17.216.66:4000/restaurant?stateId=1
+(get) quickSearch>         http://3.17.216.66:4000/quicksearch
 
 
-(get) onbasisofMeal >      https://zomatoapi.onrender.com/restaurant?mealtype_id=
-(get) cuisinefilter >      https://zomatoapi.onrender.com/filter/4?cuisine=1
-(get) costfilter >         https://zomatoapi.onrender.com/filter/1?hcost=1000&lcost=500
+(get) onbasisofMeal >      http://3.17.216.66:4000/restaurant?mealtype_id=
+(get) cuisinefilter >      http://3.17.216.66:4000/filter/4?cuisine=1
+(get) costfilter >         http://3.17.216.66:4000/filter/1?hcost=1000&lcost=500
 
-(get) restdetails >        https://zomatoapi.onrender.com/details/1
-(get) menu >               https://zomatoapi.onrender.com/menu/1
+(get) restdetails >        http://3.17.216.66:4000/details/1
+(get) menu >               http://3.17.216.66:4000/menu/1
 
-(post) orderspage >        https://zomatoapi.onrender.com/menuItem
+(post) orderspage >        http://3.17.216.66:4000/menuItem
                            body [1,4,5]
 (post)placeOrder >        
 
 (get) allorder>            
        
-(get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
+(get) restaurants>         http://3.17.216.66:4000/restaurants
 https://developerpayment.herokuapp.com/paynow
 
 

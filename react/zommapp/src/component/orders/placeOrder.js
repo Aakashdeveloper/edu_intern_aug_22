@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import './placeOrder.css';
 
-const url = "http://localhost:9700/menuItem";
+const url = "http://3.17.216.66:4000/menuItem";
 const oUrl = "http://localhost:8700/orders";
 
 class PlaceOrder extends Component {
@@ -37,6 +37,7 @@ class PlaceOrder extends Component {
             body:JSON.stringify(obj)
         })
         .then(console.log('order added'))
+        //.then(this.props.history.push('/viewBooking'))
     }
 
 
@@ -62,7 +63,7 @@ class PlaceOrder extends Component {
                         <h3>Order for {this.state.hotel_name}</h3>
                     </div>
                     <div className="panel-body">
-                        <form>
+                        <form action="http://localhost:4100/paynow" method="POST">
                             <input type="hidden" name="cost" value={this.state.cost}/>
                             <input type="hidden" name="id" value={this.state.id}/>
                             <input type="hidden" name="hotel_name" value={this.state.hotel_name}/>
@@ -94,7 +95,8 @@ class PlaceOrder extends Component {
                                     <h2>Total Price is Rs.{this.state.cost}</h2>
                                 </div>
                             </div>
-                            <button className="btn btn-success" onClick={this.checkout}>
+                            <button className="btn btn-success" onClick={this.checkout}
+                            type="submit">
                                 PlaceOrder
                             </button>
                         </form>

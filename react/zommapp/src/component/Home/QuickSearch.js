@@ -3,7 +3,7 @@ import './QuickSearch.css';
 import QuickDisplay from './QuickDisplay'
 
 //const qurl = "https://zomatoapi.onrender.com/quicksearch"
-const qurl = "http://localhost:9700/quicksearch"
+const qurl = "http://3.17.216.66:4000/quicksearch"
 class QuickSearch extends Component {
 
     constructor(){

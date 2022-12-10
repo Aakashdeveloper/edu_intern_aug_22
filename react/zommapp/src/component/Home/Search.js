@@ -4,8 +4,8 @@ import './Search.css';
 // const lurl = "https://zomatoapi.onrender.com/location"
 // const rurl = "https://zomatoapi.onrender.com/restaurant?stateId="
 
-const lurl = "http://localhost:9700/location"
-const rurl = "http://localhost:9700/restaurant?stateId="
+const lurl = "http://3.17.216.66:4000/location"
+const rurl = "http://3.17.216.66:4000/restaurant?stateId="
 class Search extends Component {
 
     constructor(props){
