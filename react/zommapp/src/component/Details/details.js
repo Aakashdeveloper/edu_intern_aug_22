@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import './details.css';
 import {Link} from 'react-router-dom';
 import MenuDisplay from './menuList';
+import Header from '../Header';
 
 // const rurl = "https://zomatoapi.onrender.com/details/1"
 // const murl = "https://zomatoapi.onrender.com/menu/1"
@@ -38,6 +39,7 @@ class Details extends Component {
         let {details} = this.state
         return(
             <>
+            <Header/>
                 <div id="mainContent">
                     <div className="imgDiv">
                         <img src={details.restaurant_thumb} alt="image"/>

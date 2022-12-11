@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import Display from './DisplayOrder';
+import Header from '../Header';
 
 const orderApi = "http://localhost:8700/orders";
 
@@ -17,6 +18,7 @@ class ViewOrder extends Component{
     render(){
         return(
             <>
+                 <Header/>
                 <Display orderData={this.state.orders}/>
             </>
         )
@@ -43,7 +45,10 @@ class ViewOrder extends Component{
             }
         }
 
-        axios.get(`${orderApi}`).then((res) => {this.setState({orders:res.data})})
+        let sessionData = sessionStorage.getItem('userInfo')?sessionStorage.getItem('userInfo').split(','):[]
+
+
+        axios.get(`${orderApi}?email=${sessionData[2]}`).then((res) => {this.setState({orders:res.data})})
     }
 }
 
